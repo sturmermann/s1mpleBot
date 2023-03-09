@@ -197,8 +197,9 @@ def mainBot():
                 logging.error(traceback.format_exc())
                 logging.error(e.message)
                 logging.error(e.args)
+                return
             except Exception as e:
-                continue
-        #print(response)
+                return
 
-mainBot()
+while True:
+    mainBot()
